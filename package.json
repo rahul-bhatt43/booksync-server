@@ -2,10 +2,10 @@
   "name": "audiobooks-server",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "start": "node -r tsconfig-paths/register dist/server.js",
+    "start": "node -r tsconfig-paths/register dist/src/server.js",
     "dev": "nodemon -r tsconfig-paths/register --exec ts-node --project tsconfig.json src/server.ts",
     "lint": "eslint 'src/**/*.ts'",
     "format": "prettier --write \"src/**/*.{ts,js,json,md}\""
