@@ -2,6 +2,7 @@ import { Audiobook } from "../models/Audiobook.model";
 import { CloudinaryService } from "./cloudinary.service";
 import { Like } from "../models/Like.model";
 import { Comment } from "../models/Comment.model";
+import { ListeningHistory } from "../models/ListeningHistory.model";
 
 export class AudiobookService {
   static async createAudiobook(data: any, audioFile: Express.Multer.File, coverImageFile?: Express.Multer.File) {
@@ -63,17 +64,24 @@ export class AudiobookService {
 
     let isLikedByUser = false;
     let userComments: any[] = [];
+    let progressInSeconds = 0;
 
     if (userId) {
       const like = await Like.findOne({ user: userId, audiobook: id });
       isLikedByUser = !!like;
       userComments = await Comment.find({ user: userId, audiobook: id }).sort({ createdAt: -1 });
+
+      const history = await ListeningHistory.findOne({ user: userId, audiobook: id });
+      if (history) {
+        progressInSeconds = history.progressInSeconds;
+      }
     }
 
     return {
       ...audiobook.toObject(),
       isLikedByUser,
       userComments,
+      progressInSeconds,
     };
   }
 
