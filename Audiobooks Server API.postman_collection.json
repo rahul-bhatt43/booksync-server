@@ -572,7 +572,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Fiction\",\n    \"description\": \"Fictional books\"\n}",
+              "raw": "{\n    \"name\": \"Neuroscience\",\n    \"description\": \"Neuroscience\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1303,9 +1303,6 @@
         {
           "name": "Get Audiobook by ID",
           "request": {
-            "auth": {
-              "type": "noauth"
-            },
             "method": "GET",
             "header": [],
             "url": {
@@ -1320,7 +1317,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "ENTER_AUDIOBOOK_ID"
+                  "value": "699fd6a4645d44c937ddc86b"
                 }
               ]
             }
@@ -1353,8 +1350,24 @@
               "_postman_previewlanguage": null,
               "header": [
                 {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
                   "key": "Content-Security-Policy",
                   "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
                 },
                 {
                   "key": "Cross-Origin-Opener-Policy",
@@ -1365,12 +1378,24 @@
                   "value": "same-origin"
                 },
                 {
+                  "key": "Date",
+                  "value": "Fri, 27 Feb 2026 17:26:53 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"560-6Af+NrHo12PZ1uTMXW92SqzX6Mg\""
+                },
+                {
                   "key": "Origin-Agent-Cluster",
                   "value": "?1"
                 },
                 {
                   "key": "Referrer-Policy",
                   "value": "no-referrer"
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
                 },
                 {
                   "key": "Strict-Transport-Security",
@@ -1381,7 +1406,7 @@
                   "value": "nosniff"
                 },
                 {
-                  "key": "X-DNS-Prefetch-Control",
+                  "key": "X-Dns-Prefetch-Control",
                   "value": "off"
                 },
                 {
@@ -1397,40 +1422,24 @@
                   "value": "none"
                 },
                 {
-                  "key": "X-XSS-Protection",
+                  "key": "X-Vercel-Cache",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::xf7x8-1772213207985-0796057e2e7c"
+                },
+                {
+                  "key": "X-Xss-Protection",
                   "value": "0"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Content-Length",
-                  "value": "1580"
-                },
-                {
-                  "key": "ETag",
-                  "value": "W/\"62c-XmP54D2m8aS1he8+qR0XC9cDwVM\""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 26 Feb 2026 05:40:55 GMT"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive"
-                },
-                {
-                  "key": "Keep-Alive",
-                  "value": "timeout=5"
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"699fd6a4645d44c937ddc86b\",\n        \"title\": \"Brain Rules\",\n        \"author\": \"Dr. John Medina\",\n        \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n        \"categoryId\": {\n            \"_id\": \"699fd464645d44c937ddc85e\",\n            \"name\": \"Psychology\"\n        },\n        \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n        \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n        \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n        \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n        \"durationInSeconds\": 1698.586122,\n        \"likesCount\": 2,\n        \"commentsCount\": 1,\n        \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n        \"updatedAt\": \"2026-02-26T05:35:48.945Z\",\n        \"__v\": 0,\n        \"isLikedByUser\": true,\n        \"userComments\": [\n            {\n                \"_id\": \"699fdad5645d44c937ddc89a\",\n                \"user\": \"699fd166645d44c937ddc854\",\n                \"audiobook\": \"699fd6a4645d44c937ddc86b\",\n                \"text\": \"This is an good audiobook!\",\n                \"createdAt\": \"2026-02-26T05:32:05.246Z\",\n                \"updatedAt\": \"2026-02-26T05:32:05.246Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"699fd6a4645d44c937ddc86b\",\n        \"title\": \"Brain Rules\",\n        \"author\": \"Dr. John Medina\",\n        \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n        \"categoryId\": {\n            \"_id\": \"699fd464645d44c937ddc85e\",\n            \"name\": \"Psychology\"\n        },\n        \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n        \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n        \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n        \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n        \"durationInSeconds\": 1698.586122,\n        \"likesCount\": 2,\n        \"commentsCount\": 0,\n        \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n        \"updatedAt\": \"2026-02-27T10:44:30.090Z\",\n        \"__v\": 0,\n        \"isLikedByUser\": false,\n        \"userComments\": [],\n        \"progressInSeconds\": 190\n    }\n}"
             }
           ]
         },
@@ -1789,7 +1798,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "ENTER_AUDIOBOOK_ID"
+                  "value": "699fd6a4645d44c937ddc86b"
                 }
               ]
             }
@@ -1924,7 +1933,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "ENTER_AUDIOBOOK_ID"
+                  "value": "699fd6a4645d44c937ddc86b"
                 }
               ]
             }
@@ -2058,7 +2067,7 @@
               "variable": [
                 {
                   "key": "commentId",
-                  "value": "699fd166645d44c937ddc854"
+                  "value": "699fda01645d44c937ddc881"
                 }
               ]
             }
@@ -2433,7 +2442,115 @@
               ]
             }
           },
-          "response": []
+          "response": [
+            {
+              "name": "200",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/history",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "history"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "519"
+                },
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 27 Feb 2026 06:46:40 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"207-lSprIYsjYKe761K+atLGHQKFnf0\""
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "no-referrer"
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-Dns-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-Vercel-Cache",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::rfsn7-1772174795519-55e3b58a7498"
+                },
+                {
+                  "key": "X-Xss-Protection",
+                  "value": "0"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"_id\": \"699fde087fcd1622f55ae9bd\",\n            \"audiobook\": {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"durationInSeconds\": 1698.586122\n            },\n            \"user\": \"699fd15d645d44c937ddc851\",\n            \"__v\": 0,\n            \"createdAt\": \"2026-02-26T05:45:43.410Z\",\n            \"isCompleted\": false,\n            \"lastListenedAt\": \"2026-02-26T05:45:43.409Z\",\n            \"progressInSeconds\": 190,\n            \"updatedAt\": \"2026-02-26T05:45:43.410Z\"\n        }\n    ]\n}"
+            }
+          ]
         }
       ]
     },
@@ -2479,8 +2596,24 @@
               "_postman_previewlanguage": null,
               "header": [
                 {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "public, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "br"
+                },
+                {
                   "key": "Content-Security-Policy",
                   "value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
                 },
                 {
                   "key": "Cross-Origin-Opener-Policy",
@@ -2491,12 +2624,24 @@
                   "value": "same-origin"
                 },
                 {
+                  "key": "Date",
+                  "value": "Fri, 27 Feb 2026 17:27:28 GMT"
+                },
+                {
+                  "key": "Etag",
+                  "value": "W/\"1c92-QRQMf/F5GZsbKxqcvSRvMJbcY7c\""
+                },
+                {
                   "key": "Origin-Agent-Cluster",
                   "value": "?1"
                 },
                 {
                   "key": "Referrer-Policy",
                   "value": "no-referrer"
+                },
+                {
+                  "key": "Server",
+                  "value": "Vercel"
                 },
                 {
                   "key": "Strict-Transport-Security",
@@ -2507,7 +2652,7 @@
                   "value": "nosniff"
                 },
                 {
-                  "key": "X-DNS-Prefetch-Control",
+                  "key": "X-Dns-Prefetch-Control",
                   "value": "off"
                 },
                 {
@@ -2523,40 +2668,24 @@
                   "value": "none"
                 },
                 {
-                  "key": "X-XSS-Protection",
+                  "key": "X-Vercel-Cache",
+                  "value": "BYPASS"
+                },
+                {
+                  "key": "X-Vercel-Id",
+                  "value": "bom1::iad1::nv568-1772213246409-fccebf40881c"
+                },
+                {
+                  "key": "X-Xss-Protection",
                   "value": "0"
                 },
                 {
-                  "key": "Access-Control-Allow-Origin",
-                  "value": "*"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json; charset=utf-8"
-                },
-                {
-                  "key": "Content-Length",
-                  "value": "5970"
-                },
-                {
-                  "key": "ETag",
-                  "value": "W/\"1752-7YXlpT1tO8RAdhvtqWbV/nWHEGo\""
-                },
-                {
-                  "key": "Date",
-                  "value": "Thu, 26 Feb 2026 05:23:03 GMT"
-                },
-                {
-                  "key": "Connection",
-                  "value": "keep-alive"
-                },
-                {
-                  "key": "Keep-Alive",
-                  "value": "timeout=5"
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
                 }
               ],
               "cookie": [],
-              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"continueListening\": [],\n        \"latest\": [\n            {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd464645d44c937ddc85e\",\n                    \"name\": \"Psychology\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                \"durationInSeconds\": 1698.586122,\n                \"likesCount\": 0,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                \"updatedAt\": \"2026-02-26T05:14:12.705Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd56c645d44c937ddc868\",\n                \"title\": \"Better Than Before\",\n                \"author\": \"Gretchen Rubin\",\n                \"description\": \"Better Than Before (2015) by Gretchen Rubin is a self-help guide that argues the secret to changing habits is self-knowledge. It rejects \\\"one-size-fits-all\\\" solutions, instead offering a framework called the Four Tendencies—Upholder, Questioner, Obliger, and Rebel—to help you identify how you personally respond to expectations.\\nThe book identifies 21 strategies to make or break habits, such as monitoring (tracking behavior), scheduling (setting specific times), and accountability (using external pressure). By understanding your own personality type, you can choose the specific tools that will actually work for your life.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd458645d44c937ddc85b\",\n                    \"name\": \"Self-Help\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082538/audiobooks/w1se17e9tlzfuxnpqb91.mp3\",\n                \"audioPublicId\": \"audiobooks/w1se17e9tlzfuxnpqb91\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082541/audiobooks/covers/fdccatxtvt2jfmggfqvs.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/fdccatxtvt2jfmggfqvs\",\n                \"durationInSeconds\": 1442.142041,\n                \"likesCount\": 0,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:09:00.994Z\",\n                \"updatedAt\": \"2026-02-26T05:09:00.994Z\",\n                \"__v\": 0\n            }\n        ],\n        \"popular\": [\n            {\n                \"_id\": \"699fd56c645d44c937ddc868\",\n                \"title\": \"Better Than Before\",\n                \"author\": \"Gretchen Rubin\",\n                \"description\": \"Better Than Before (2015) by Gretchen Rubin is a self-help guide that argues the secret to changing habits is self-knowledge. It rejects \\\"one-size-fits-all\\\" solutions, instead offering a framework called the Four Tendencies—Upholder, Questioner, Obliger, and Rebel—to help you identify how you personally respond to expectations.\\nThe book identifies 21 strategies to make or break habits, such as monitoring (tracking behavior), scheduling (setting specific times), and accountability (using external pressure). By understanding your own personality type, you can choose the specific tools that will actually work for your life.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd458645d44c937ddc85b\",\n                    \"name\": \"Self-Help\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082538/audiobooks/w1se17e9tlzfuxnpqb91.mp3\",\n                \"audioPublicId\": \"audiobooks/w1se17e9tlzfuxnpqb91\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082541/audiobooks/covers/fdccatxtvt2jfmggfqvs.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/fdccatxtvt2jfmggfqvs\",\n                \"durationInSeconds\": 1442.142041,\n                \"likesCount\": 0,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:09:00.994Z\",\n                \"updatedAt\": \"2026-02-26T05:09:00.994Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd464645d44c937ddc85e\",\n                    \"name\": \"Psychology\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                \"durationInSeconds\": 1698.586122,\n                \"likesCount\": 0,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                \"updatedAt\": \"2026-02-26T05:14:12.705Z\",\n                \"__v\": 0\n            }\n        ],\n        \"categories\": [\n            {\n                \"_id\": \"699fd458645d44c937ddc85b\",\n                \"name\": \"Self-Help\",\n                \"description\": \"Self-Help\",\n                \"createdAt\": \"2026-02-26T05:04:24.270Z\",\n                \"updatedAt\": \"2026-02-26T05:04:24.270Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd464645d44c937ddc85e\",\n                \"name\": \"Psychology\",\n                \"description\": \"Psychology\",\n                \"createdAt\": \"2026-02-26T05:04:36.489Z\",\n                \"updatedAt\": \"2026-02-26T05:04:36.489Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd46f645d44c937ddc861\",\n                \"name\": \"Personal Development\",\n                \"description\": \"Personal Development\",\n                \"createdAt\": \"2026-02-26T05:04:47.384Z\",\n                \"updatedAt\": \"2026-02-26T05:04:47.384Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd4ac645d44c937ddc864\",\n                \"name\": \"Neuroscience\",\n                \"description\": \"Neuroscience\",\n                \"createdAt\": \"2026-02-26T05:05:48.188Z\",\n                \"updatedAt\": \"2026-02-26T05:05:48.188Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"continueListening\": [\n            {\n                \"progressInSeconds\": 190,\n                \"lastListenedAt\": \"2026-02-26T05:45:43.409Z\",\n                \"audiobook\": {\n                    \"_id\": \"699fd6a4645d44c937ddc86b\",\n                    \"title\": \"Brain Rules\",\n                    \"author\": \"Dr. John Medina\",\n                    \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                    \"categoryId\": \"699fd464645d44c937ddc85e\",\n                    \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                    \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                    \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                    \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                    \"durationInSeconds\": 1698.586122,\n                    \"likesCount\": 2,\n                    \"commentsCount\": 0,\n                    \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                    \"updatedAt\": \"2026-02-27T10:44:30.090Z\",\n                    \"__v\": 0\n                }\n            }\n        ],\n        \"latest\": [\n            {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd464645d44c937ddc85e\",\n                    \"name\": \"Psychology\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                \"durationInSeconds\": 1698.586122,\n                \"likesCount\": 2,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                \"updatedAt\": \"2026-02-27T10:44:30.090Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd56c645d44c937ddc868\",\n                \"title\": \"Better Than Before\",\n                \"author\": \"Gretchen Rubin\",\n                \"description\": \"Better Than Before (2015) by Gretchen Rubin is a self-help guide that argues the secret to changing habits is self-knowledge. It rejects \\\"one-size-fits-all\\\" solutions, instead offering a framework called the Four Tendencies—Upholder, Questioner, Obliger, and Rebel—to help you identify how you personally respond to expectations.\\nThe book identifies 21 strategies to make or break habits, such as monitoring (tracking behavior), scheduling (setting specific times), and accountability (using external pressure). By understanding your own personality type, you can choose the specific tools that will actually work for your life.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd458645d44c937ddc85b\",\n                    \"name\": \"Self-Help\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082538/audiobooks/w1se17e9tlzfuxnpqb91.mp3\",\n                \"audioPublicId\": \"audiobooks/w1se17e9tlzfuxnpqb91\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082541/audiobooks/covers/fdccatxtvt2jfmggfqvs.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/fdccatxtvt2jfmggfqvs\",\n                \"durationInSeconds\": 1442.142041,\n                \"likesCount\": 1,\n                \"commentsCount\": 2,\n                \"createdAt\": \"2026-02-26T05:09:00.994Z\",\n                \"updatedAt\": \"2026-02-27T10:00:52.106Z\",\n                \"__v\": 0\n            }\n        ],\n        \"popular\": [\n            {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd464645d44c937ddc85e\",\n                    \"name\": \"Psychology\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                \"durationInSeconds\": 1698.586122,\n                \"likesCount\": 2,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                \"updatedAt\": \"2026-02-27T10:44:30.090Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd56c645d44c937ddc868\",\n                \"title\": \"Better Than Before\",\n                \"author\": \"Gretchen Rubin\",\n                \"description\": \"Better Than Before (2015) by Gretchen Rubin is a self-help guide that argues the secret to changing habits is self-knowledge. It rejects \\\"one-size-fits-all\\\" solutions, instead offering a framework called the Four Tendencies—Upholder, Questioner, Obliger, and Rebel—to help you identify how you personally respond to expectations.\\nThe book identifies 21 strategies to make or break habits, such as monitoring (tracking behavior), scheduling (setting specific times), and accountability (using external pressure). By understanding your own personality type, you can choose the specific tools that will actually work for your life.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd458645d44c937ddc85b\",\n                    \"name\": \"Self-Help\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082538/audiobooks/w1se17e9tlzfuxnpqb91.mp3\",\n                \"audioPublicId\": \"audiobooks/w1se17e9tlzfuxnpqb91\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082541/audiobooks/covers/fdccatxtvt2jfmggfqvs.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/fdccatxtvt2jfmggfqvs\",\n                \"durationInSeconds\": 1442.142041,\n                \"likesCount\": 1,\n                \"commentsCount\": 2,\n                \"createdAt\": \"2026-02-26T05:09:00.994Z\",\n                \"updatedAt\": \"2026-02-27T10:00:52.106Z\",\n                \"__v\": 0\n            }\n        ],\n        \"categories\": [\n            {\n                \"_id\": \"699fd458645d44c937ddc85b\",\n                \"name\": \"Self-Help\",\n                \"description\": \"Self-Help\",\n                \"createdAt\": \"2026-02-26T05:04:24.270Z\",\n                \"updatedAt\": \"2026-02-26T05:04:24.270Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd464645d44c937ddc85e\",\n                \"name\": \"Psychology\",\n                \"description\": \"Psychology\",\n                \"createdAt\": \"2026-02-26T05:04:36.489Z\",\n                \"updatedAt\": \"2026-02-26T05:04:36.489Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd46f645d44c937ddc861\",\n                \"name\": \"Personal Development\",\n                \"description\": \"Personal Development\",\n                \"createdAt\": \"2026-02-26T05:04:47.384Z\",\n                \"updatedAt\": \"2026-02-26T05:04:47.384Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"699fd4ac645d44c937ddc864\",\n                \"name\": \"Neuroscience\",\n                \"description\": \"Neuroscience d\",\n                \"createdAt\": \"2026-02-26T05:05:48.188Z\",\n                \"updatedAt\": \"2026-02-26T05:42:48.786Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
             }
           ]
         },
@@ -2690,6 +2819,946 @@
               "body": "{\n    \"success\": true,\n    \"data\": {\n        \"audiobooks\": [\n            {\n                \"_id\": \"699fd6a4645d44c937ddc86b\",\n                \"title\": \"Brain Rules\",\n                \"author\": \"Dr. John Medina\",\n                \"description\": \"Brain Rules (2008) by Dr. John Medina is a science-backed guide that explains how the human brain functions and how to apply this knowledge to improve work, school, and home life. A molecular biologist, Medina breaks down complex neuroscience into 12 \\\"rules\\\" that describe our brain's core abilities and limitations.\\nThe book's core premise is that modern environments—like high-stress cubicles and sedentary classrooms—are often designed in direct opposition to how our brains evolved to function. By understanding evolutionary biology, we can use our natural impulses to enhance learning, productivity, and health.\",\n                \"categoryId\": {\n                    \"_id\": \"699fd464645d44c937ddc85e\",\n                    \"name\": \"Psychology\"\n                },\n                \"audioUrl\": \"https://res.cloudinary.com/dvrlt0x85/video/upload/v1772082847/audiobooks/iml7jx3s3kgl0pg90fqj.mp3\",\n                \"audioPublicId\": \"audiobooks/iml7jx3s3kgl0pg90fqj\",\n                \"coverImageUrl\": \"https://res.cloudinary.com/dvrlt0x85/image/upload/v1772082851/audiobooks/covers/gyzt1hmdtwgh0kqpsdnj.png\",\n                \"coverImagePublicId\": \"audiobooks/covers/gyzt1hmdtwgh0kqpsdnj\",\n                \"durationInSeconds\": 1698.586122,\n                \"likesCount\": 0,\n                \"commentsCount\": 0,\n                \"createdAt\": \"2026-02-26T05:14:12.705Z\",\n                \"updatedAt\": \"2026-02-26T05:14:12.705Z\",\n                \"__v\": 0\n            }\n        ],\n        \"categories\": []\n    }\n}"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Playlists",
+      "item": [
+        {
+          "name": "Create Playlist",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"My Favorites\",\n    \"description\": \"Best books\",\n    \"isPublic\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Playlists",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                "user"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Playlist By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                ":id"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Playlist",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                ":id"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Updated Name\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Playlist",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                ":id"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Audiobook to Playlist",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/:id/audiobooks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                ":id",
+                "audiobooks"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"audiobookId\": \"699fd166645d44c937ddc854\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove Audiobook",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/playlists/:id/audiobooks/:audiobookId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "playlists",
+                ":id",
+                "audiobooks",
+                ":audiobookId"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Create/Update Review",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/reviews",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "reviews"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"rating\": 5,\n    \"text\": \"Amazing book!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reviews for Audiobook",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/reviews",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "reviews"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Review",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/reviews/me",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "reviews",
+                "me"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Review",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/reviews",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "reviews"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bookmarks",
+      "item": [
+        {
+          "name": "Create Bookmark",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/bookmarks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "bookmarks"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timestamp\": 120,\n    \"note\": \"Interesting quote here\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Bookmarks for Audiobook",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/audiobooks/:audiobookId/bookmarks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "audiobooks",
+                ":audiobookId",
+                "bookmarks"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Bookmark",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/bookmarks/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "bookmarks",
+                ":id"
+              ]
+            },
+            "description": "Requires Auth Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"note\": \"Updated note\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Bookmark",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/bookmarks/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "bookmarks",
+                ":id"
+              ]
+            },
+            "description": "Requires Auth Token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin Dashboard",
+      "item": [
+        {
+          "name": "Get Dashboard Stats",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/stats",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "admin",
+                "stats"
+              ]
+            },
+            "description": "Requires Admin Token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "Create Author",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authors"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Neil Gaiman\",\n    \"biography\": \"English author of short fiction, novels, comic books, graphic novels, nonfiction, audio theatre, and films.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Authors",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authors",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authors"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Author By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authors/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authors",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authors/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authors",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"biography\": \"Updated bio.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Author",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/authors/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authors",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Narrators",
+      "item": [
+        {
+          "name": "Create Narrator",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/narrators",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "narrators"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Stephen Fry\",\n    \"biography\": \"English actor, broadcaster, comedian, director and writer.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Narrators",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/narrators",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "narrators"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Narrator By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/narrators/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "narrators",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        },
+        {
+          "name": "Update Narrator",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/narrators/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "narrators",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"biography\": \"Updated narrator bio.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Narrator",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/narrators/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "narrators",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token (where applicable)"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "App Links",
+      "item": [
+        {
+          "name": "Get Active App Links",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/app-links/active",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links",
+                "active"
+              ]
+            },
+            "description": "Public Endpoint"
+          },
+          "response": []
+        },
+        {
+          "name": "Create App Link",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/app-links",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links"
+              ]
+            },
+            "description": "Requires Admin Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"platform\": \"ios\",\n    \"url\": \"https://apps.apple.com/app/apple-store/id123456789\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All App Links (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/app-links",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links"
+              ]
+            },
+            "description": "Requires Admin Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Get App Link By ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/app-links/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token"
+          },
+          "response": []
+        },
+        {
+          "name": "Update App Link",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/app-links/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"url\": \"https://apps.apple.com/app/updated-link\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete App Link",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/app-links/:id",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "app-links",
+                ":id"
+              ]
+            },
+            "description": "Requires Admin Token"
+          },
+          "response": []
         }
       ]
     }

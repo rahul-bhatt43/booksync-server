@@ -2,7 +2,8 @@ import Joi from "joi";
 
 export const createAudiobookSchema = Joi.object({
   title: Joi.string().required().trim().min(2).max(100),
-  author: Joi.string().required().trim().min(2).max(100),
+  authorId: Joi.string().required().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
+  narratorId: Joi.string().optional().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
   description: Joi.string().optional().allow(""),
   categoryId: Joi.string().required().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
   // Files are validated by multer mostly, not Joi easily.
@@ -10,7 +11,8 @@ export const createAudiobookSchema = Joi.object({
 
 export const updateAudiobookSchema = Joi.object({
   title: Joi.string().optional().trim().min(2).max(100),
-  author: Joi.string().optional().trim().min(2).max(100),
+  authorId: Joi.string().optional().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
+  narratorId: Joi.string().optional().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
   description: Joi.string().optional().allow(""),
   categoryId: Joi.string().optional().regex(/^[0-9a-fA-F]{24}$/, "Valid Object ID"),
 });

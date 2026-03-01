@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { Audiobook } from "../models/Audiobook.model";
+import { Author } from "../models/Author.model";
 import { Category } from "../models/Category.model";
 import { ListeningHistory } from "../models/ListeningHistory.model";
 
@@ -10,12 +11,14 @@ export class FeedController {
             const latest = await Audiobook.find()
                 .sort({ createdAt: -1 })
                 .limit(10)
-                .populate("categoryId", "name");
+                .populate("categoryId", "name")
+                .populate("authorId", "name imageUrl");
 
             const popular = await Audiobook.find()
                 .sort({ likesCount: -1, commentsCount: -1 })
                 .limit(10)
-                .populate("categoryId", "name");
+                .populate("categoryId", "name")
+                .populate("authorId", "name imageUrl");
 
             let continueListening: any[] = [];
 
@@ -27,7 +30,10 @@ export class FeedController {
                 })
                     .sort({ lastListenedAt: -1 })
                     .limit(5)
-                    .populate("audiobook");
+                    .populate({
+                        path: "audiobook",
+                        populate: { path: "authorId", select: "name imageUrl" }
+                    });
 
                 continueListening = history.map(h => ({
                     progressInSeconds: h.progressInSeconds,
@@ -60,13 +66,18 @@ export class FeedController {
                 return;
             }
 
-            // Search in audiobooks title and author
+            const matchingAuthors = await Author.find({ name: { $regex: q, $options: "i" } }).select('_id');
+            const authorIds = matchingAuthors.map(a => a._id);
+
+            // Search in audiobooks title and authorId
             const audiobooks = await Audiobook.find({
                 $or: [
                     { title: { $regex: q, $options: "i" } },
-                    { author: { $regex: q, $options: "i" } }
+                    { authorId: { $in: authorIds } }
                 ]
-            }).populate("categoryId", "name");
+            })
+                .populate("categoryId", "name")
+                .populate("authorId", "name imageUrl");
 
             // Search categories
             const categories = await Category.find({

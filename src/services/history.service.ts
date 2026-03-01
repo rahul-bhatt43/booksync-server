@@ -20,7 +20,8 @@ export class HistoryService {
         const history = await ListeningHistory.find({ user: userId })
             .populate({
                 path: "audiobook",
-                select: "title author coverImageUrl durationInSeconds",
+                select: "title authorId coverImageUrl durationInSeconds",
+                populate: { path: "authorId", select: "name" }
             })
             .sort({ lastListenedAt: -1 });
 

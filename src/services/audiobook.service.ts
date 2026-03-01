@@ -1,4 +1,5 @@
 import { Audiobook } from "../models/Audiobook.model";
+import { Author } from "../models/Author.model";
 import { CloudinaryService } from "./cloudinary.service";
 import { Like } from "../models/Like.model";
 import { Comment } from "../models/Comment.model";
@@ -24,7 +25,8 @@ export class AudiobookService {
     // 3. Save the metadata and the Cloudinary secure URL to MongoDB
     const audiobook = new Audiobook({
       title: data.title,
-      author: data.author,
+      authorId: data.authorId,
+      narratorId: data.narratorId,
       description: data.description,
       categoryId: data.categoryId,
       audioUrl: uploadResult.secure_url,
@@ -49,17 +51,27 @@ export class AudiobookService {
     }
 
     if (filters.search) {
+      const matchingAuthors = await Author.find({ name: { $regex: filters.search, $options: "i" } }).select('_id');
+      const authorIds = matchingAuthors.map(a => a._id);
+
       query.$or = [
         { title: { $regex: filters.search, $options: "i" } },
-        { author: { $regex: filters.search, $options: "i" } },
+        { authorId: { $in: authorIds } },
       ];
     }
 
-    return Audiobook.find(query).populate("categoryId", "name").sort({ createdAt: -1 });
+    return Audiobook.find(query)
+      .populate("categoryId", "name")
+      .populate("authorId", "name imageUrl")
+      .populate("narratorId", "name imageUrl")
+      .sort({ createdAt: -1 });
   }
 
   static async getAudiobookById(id: string, userId?: string) {
-    const audiobook = await Audiobook.findById(id).populate("categoryId", "name");
+    const audiobook = await Audiobook.findById(id)
+      .populate("categoryId", "name")
+      .populate("authorId", "name biography imageUrl")
+      .populate("narratorId", "name biography imageUrl");
     if (!audiobook) throw new Error("Audiobook not found");
 
     let isLikedByUser = false;

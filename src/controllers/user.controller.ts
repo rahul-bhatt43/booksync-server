@@ -18,7 +18,11 @@ export class UserController {
 
             // Fetch user's public activity: likes
             const likes = await Like.find({ user: userParamId })
-                .populate("audiobook", "title author coverImageUrl")
+                .populate({
+                    path: "audiobook",
+                    select: "title authorId coverImageUrl",
+                    populate: { path: "authorId", select: "name" }
+                })
                 .sort({ createdAt: -1 })
                 .limit(10);
 
@@ -27,7 +31,11 @@ export class UserController {
             // Only fetch history if the user is requesting their own profile
             if (isSelf) {
                 history = await ListeningHistory.find({ user: userParamId })
-                    .populate("audiobook", "title author coverImageUrl durationInSeconds")
+                    .populate({
+                        path: "audiobook",
+                        select: "title authorId coverImageUrl durationInSeconds",
+                        populate: { path: "authorId", select: "name" }
+                    })
                     .sort({ lastListenedAt: -1 })
                     .limit(10);
             }
