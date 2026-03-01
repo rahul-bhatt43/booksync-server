@@ -16,7 +16,7 @@ const fileFilter = (req: Express.Request, file: Express.Multer.File, cb: multer.
 export const upload = multer({
   storage,
   limits: {
-    fileSize: 50 * 1024 * 1024, // 50MB limit for audiobooks
+    fileSize: 70 * 1024 * 1024, // 70MB limit for audiobooks
   },
   fileFilter,
 });

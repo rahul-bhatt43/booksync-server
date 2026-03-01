@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import routes from "./routes";
+import { errorHandler } from "./middlewares/error.middleware";
 
 const app: Application = express();
 
@@ -20,5 +21,8 @@ app.get("/health", (req, res) => {
 
 // API Routes
 app.use("/api/v1", routes);
+
+// Global Error Handler (should be after all routes)
+app.use(errorHandler);
 
 export default app;
