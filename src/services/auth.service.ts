@@ -28,7 +28,7 @@ export const authService = {
             name,
             email,
             password: hashedPassword,
-            role: role || "user",
+            role: "user", // Hardcode to standard user
         });
 
         const token = generateToken(user._id.toString(), user.role);
