@@ -26,6 +26,8 @@ export class AudiobookController {
     try {
       const filters = {
         categoryId: req.query.categoryId,
+        authorId: req.query.authorId,
+        narratorId: req.query.narratorId,
         search: req.query.search,
       };
 

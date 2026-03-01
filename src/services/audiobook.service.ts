@@ -50,6 +50,20 @@ export class AudiobookService {
       query.categoryId = { $in: categories };
     }
 
+    if (filters.authorId) {
+      const authors = Array.isArray(filters.authorId)
+        ? filters.authorId
+        : (filters.authorId as string).split(',');
+      query.authorId = { $in: authors };
+    }
+
+    if (filters.narratorId) {
+      const narrators = Array.isArray(filters.narratorId)
+        ? filters.narratorId
+        : (filters.narratorId as string).split(',');
+      query.narratorId = { $in: narrators };
+    }
+
     if (filters.search) {
       const matchingAuthors = await Author.find({ name: { $regex: filters.search, $options: "i" } }).select('_id');
       const authorIds = matchingAuthors.map(a => a._id);
