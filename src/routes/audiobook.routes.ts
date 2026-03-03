@@ -18,6 +18,9 @@ router
     .get(AudiobookController.getAll)
     .post(protect, authorize("admin"), uploadFields, validate(createAudiobookSchema), AudiobookController.create);
 
+// Public catalog endpoint - trending audiobooks (must be before /:id)
+router.get("/catalog", AudiobookController.getTrending);
+
 router
     .route("/:id")
     .get(optionalAuth, AudiobookController.getById)

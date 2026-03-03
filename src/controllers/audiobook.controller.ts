@@ -38,6 +38,15 @@ export class AudiobookController {
     }
   }
 
+  static async getTrending(req: Request, res: Response, next: NextFunction) {
+    try {
+      const audiobooks = await AudiobookService.getTrendingAudiobooks();
+      res.status(200).json({ success: true, data: audiobooks });
+    } catch (error: any) {
+      next(error);
+    }
+  }
+
   static async getById(req: Request, res: Response, next: NextFunction) {
     try {
       const userId = req.user?._id?.toString();

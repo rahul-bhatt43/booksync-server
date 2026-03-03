@@ -81,6 +81,15 @@ export class AudiobookService {
       .sort({ createdAt: -1 });
   }
 
+  static async getTrendingAudiobooks() {
+    return Audiobook.find()
+      .select("coverImageUrl categoryId durationInSeconds title authorId averageRating")
+      .populate("categoryId", "name")
+      .populate("authorId", "name imageUrl")
+      .sort({ averageRating: -1, likesCount: -1 })
+      .limit(10);
+  }
+
   static async getAudiobookById(id: string, userId?: string) {
     const audiobook = await Audiobook.findById(id)
       .populate("categoryId", "name")
