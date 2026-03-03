@@ -6,6 +6,8 @@ export interface IUser extends Document {
   password?: string; // Optional for OAuth if we add it later
   role: "admin" | "user";
   profilePictureUrl?: string; // Cloudinary URL
+  resetPasswordToken?: string;
+  resetPasswordExpire?: Date;
 }
 
 const UserSchema = new Schema<IUser>(
@@ -25,6 +27,8 @@ const UserSchema = new Schema<IUser>(
       default: "user",
     },
     profilePictureUrl: { type: String },
+    resetPasswordToken: { type: String },
+    resetPasswordExpire: { type: Date },
   },
   { timestamps: true }
 );
